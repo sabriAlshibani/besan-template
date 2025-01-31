@@ -14,7 +14,7 @@
   --main-padding: 80px;
 }
 body {
-  font-family: "cairo", sans-serif;
+  font-family: "Cairo", serif;
 }
 .container {
   padding-left: 15px;
@@ -217,8 +217,6 @@ body {
     display: none;
   }
 }
-.landing .image {
-}
 .landing .image img {
   width: 500px;
   border-radius: 20px;
@@ -342,8 +340,6 @@ body {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
 }
-.traveling .container {
-}
 .traveling .content {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -454,6 +450,16 @@ body {
   background-size: cover;
   padding: 20px;
   margin: 100px auto 20px;
+  position: relative;
+}
+.services .description .year-age::after {
+  content: "+";
+  position: absolute;
+  right: -10px;
+  color: var(--main-color);
+  font-size: 100px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .services .description .year-age h4 {
   font-size: 50px;
@@ -511,6 +517,105 @@ body {
   font-size: 20px;
 }
 /* End services */
+/* Start sayings */
+.sayings {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.sayings .container {
+}
+.sayings .container .dir {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.sayings .container .to-left {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  background-color: white;
+  border: none;
+  padding: 10px;
+  box-shadow: 0 2px 20px rgb(0 0 0 / 30%);
+}
+
+.sayings .container .to-right {
+  position: absolute;
+  right: 0;
+  background-color: white;
+  border: none;
+  padding: 10px;
+  box-shadow: 0 2px 20px rgb(0 0 0 / 30%);
+}
+.sayings .to-left i,
+.sayings .to-right i {
+  color: var(--main-color);
+  font-size: 35px;
+}
+.sayings .items-wapper {
+  width: 1000px;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+.sayings .items {
+  display: flex;
+  gap: 20px;
+  transition: var(--main-transition);
+}
+.sayings .items .item {
+  min-width: 50%;
+  max-width: 50%;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid var(--main-color-alt);
+  border-radius: 20px;
+  overflow: hidden;
+}
+@media (max-width: 991px) {
+  .sayings .items .item {
+    min-width: 100%;
+  }
+}
+
+.sayings .items .profile {
+  display: flex;
+  justify-content: space-between;
+}
+.sayings .items .person {
+}
+.sayings .qutes {
+  font-size: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--main-color);
+}
+.sayings .items .image {
+}
+.sayings .items .image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.sayings .person .rates {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 10px 0;
+  color: gold;
+  font-size: 20px;
+}
+.sayings .rates i {
+}
+.sayings .item h4 {
+}
+.sayings .item p {
+  max-width: 100%;
+}
+/* End sayings */
 /* Start animation */
 @keyframes left-move {
   50% {
